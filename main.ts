@@ -326,7 +326,7 @@ function AnimaciónVoladores () {
 }
 function IniciarNivel (level: number) {
     effects.clouds.startScreenEffect()
-    ubicacionInicial = 0
+    ubicacionInicial = tiles.getTilesByType(assets.tile`tile6`)[0]
     tiles.placeOnTile(marioBros64, ubicacionInicial)
     tiles.setTileAt(ubicacionInicial, assets.tile`tile0`)
     Enemigos()
@@ -816,7 +816,7 @@ let moneda: Sprite = null
 let animacionMoneda: animation.Animation = null
 let dobleSaltoRap = 0
 let dobleSalto = false
-let ubicacionInicial = 0
+let ubicacionInicial: tiles.Location = null
 let perfilesVuelo: animation.Animation = null
 let vuelo: animation.Animation = null
 let correrDer: animation.Animation = null
